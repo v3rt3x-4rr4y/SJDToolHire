@@ -1,0 +1,17 @@
+﻿@using SJDToolHire.Domain.Entities
+@using SJDToolHire.WebUI.HtmlHelpers
+
+@model SJDToolHire.WebUI.Models.ToolsListViewModel
+
+@{
+    ViewBag.Title = "Tools";
+}
+
+@foreach (var p in Model.Tools)
+{
+    @Html.Partial("ToolSummary", p)
+}
+
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new {page =  x, category = Model.CurrentCategory}))
+</div>

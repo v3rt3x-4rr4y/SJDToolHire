@@ -1,0 +1,15 @@
+﻿@model SJDToolHire.Domain.Entities.Tool
+
+<div class="well">
+    <h3>
+        <strong>@Model.Name</strong>
+        <span class="pull-right label label-primary">
+            @Model.Rate.ToString("c") per day
+        </span>
+    </h3>
+    <span class="lead">@Model.Description</span>
+    <p>@Model.Power</p>
+    <p>@Model.Weight</p>
+    <p>@Model.Category</p>
+    <img src='@Url.Content(@Model.ImageUrl)' />  
+</div>

@@ -38,6 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.1.1309.1617\lib\net40\Moq.dll</HintPath>
@@ -95,21 +101,81 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\18v-cordless-drill.jpg" />
+    <Content Include="Content\Images\18v-cordless-grinder.jpg" />
+    <Content Include="Content\Images\18v-cordless-jigsaw.jpg" />
+    <Content Include="Content\Images\angle-grinder.jpg" />
+    <Content Include="Content\Images\arc-welder.jpg" />
+    <Content Include="Content\Images\band-saw.jpg" />
+    <Content Include="Content\Images\belt-sander.jpg" />
+    <Content Include="Content\Images\biscuit-jointer.jpg" />
+    <Content Include="Content\Images\bobbin-sander.jpg" />
+    <Content Include="Content\Images\chop-saw.jpg" />
+    <Content Include="Content\Images\circular-saw.jpg" />
+    <Content Include="Content\Images\cordless-nailer.jpg" />
+    <Content Include="Content\Images\detail-sander.jpg" />
+    <Content Include="Content\Images\diamond-core-drill.jpg" />
+    <Content Include="Content\Images\diesel-cement-mixer.jpg" />
+    <Content Include="Content\Images\diesel-generator.jpg" />
+    <Content Include="Content\Images\electric-cement-mixer.jpg" />
+    <Content Include="Content\Images\electric-chainsaw.jpg" />
+    <Content Include="Content\Images\electric-compactor.jpg" />
+    <Content Include="Content\Images\jigsaw.jpg" />
+    <Content Include="Content\Images\mains-nailer.jpg" />
+    <Content Include="Content\Images\micro-pipe-bender.jpg" />
+    <Content Include="Content\Images\mig-welder.jpg" />
+    <Content Include="Content\Images\mitre-saw.jpg" />
+    <Content Include="Content\Images\orbital-sander.jpg" />
+    <Content Include="Content\Images\petrol-chainsaw.jpg" />
+    <Content Include="Content\Images\petrol-compactor.jpg" />
+    <Content Include="Content\Images\petrol-generator.jpg" />
+    <Content Include="Content\Images\planer-thicknesser.jpg" />
+    <Content Include="Content\Images\road-breaker.jpg" />
+    <Content Include="Content\Images\SDS-drill.jpg" />
+    <Content Include="Content\Images\sheet-sander.jpg" />
+    <Content Include="Content\Images\stand-pipe-bender.jpg" />
+    <Content Include="Content\Images\table-saw.jpg" />
+    <Content Include="Content\Images\wall-breaker.jpg" />
+    <Content Include="Content\Images\wood-lathe.jpg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\NavController.cs" />
+    <Compile Include="Controllers\ToolController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HtmlHelpers\PagingHelpers.cs" />
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
+    <Compile Include="Models\PagingInfo.cs" />
+    <Compile Include="Models\ToolsListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Tool\List.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\ToolSummary.cshtml" />
+    <Content Include="Views\Nav\Menu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -119,8 +185,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SJDToolHire.Domain\SJDToolHire.Domain.csproj">
