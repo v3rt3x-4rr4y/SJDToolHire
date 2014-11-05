@@ -1,0 +1,36 @@
+1	Cordless Drill	4.0Ah Li-Ion battery, 13mm max drill diameter.	18.60	Drilling	~/Content/Images/18v-cordless-drill.jpg	2.6kg	18v
+5	Cordless Grinder	Disc dia. 115mm x 22mm bore, no load speed 10,000rpm, spindle thread M14, overall length 360mm.	37.80	Grinding	~/Content/Images/18v-cordless-grinder.jpg	4.6kg	18v
+6	Cordless Jigsaw	3000spm, keyless blade change, anti-vibration control, 3-position pendulum action.	38.40	Sawing	~/Content/Images/18v-cordless-jigsaw.jpg	3.4kg	18v
+7	Angle Grinder	Disc dia. 230mm x 22.2mm bore, no load speed 6500rpm, overall length 515mm.	29.60	Grinding	~/Content/Images/angle-grinder.jpg	4.5kg	110v
+14	Arc Welder	35-160A, thermal overload protection, fan cooling.	39.00	Welding	~/Content/Images/arc-welder.jpg	18kg	240v
+16	Band Saw	Blade length 1778mm, blade speed 740m/min, table tilt 0-45°, dust extraction port 58mm.	51.00	Sawing	~/Content/Images/band-saw.jpg	30kg	240v
+17	Belt Sander	Sanding surface W x L: 76 x 130mm. Belt W x L: 75 x 457mm. No load speed 250m/min.	24.40	Sanding	~/Content/Images/belt-sander.jpg	2.4kg	240v
+20	Biscuit Jointer	Blade dia. 100 x 22mm bore, 0-90° fence adjustment, dust extraction facility, 3 pre-set angles.	32.60	Joinery	~/Content/Images/biscuit-jointer.jpg	3.2kg	240v
+21	Bobbin Sander	0.5hp induction motor, dust extraction port, rack & pinion table, tilt 0-45 degs.	34.20	Sanding	~/Content/Images/bobbin-sander.jpg	12.7kg	240v
+22	Chop Saw	Disc dia. 355mm x 25.4mm bore, max. box section cut 119 x 119mm.	39.80	Sawing	~/Content/Images/chop-saw.jpg	4.8kg	110v
+24	Circular Saw	Blade dia. 190mm x 30mm bore, bevel cuts 0-48°, no load speed 5000rpm.	32.50	Sawing	~/Content/Images/circular-saw.jpg	4.1kg	240v
+25	Cordless Nailer	Rear-loading 30° angled magazine. Capacity 55 nails. Fires 51-90mm nails, shank size 2.8-31mm	21.40	Joinery	~/Content/Images/cordless-nailer.jpg	2.3.kg	7.4v
+27	Detail Sander	Sanding surface (W x L) 98 x 139mm, orbit speed 13,000opm.	18.50	Sanding	~/Content/Images/detail-sander.jpg	1.3kg	240v
+28	Diamond Core Drill	Max. drill depth masonry 16mm (152mm core), wood 45mm, steel 16mm, max. torque 32Nm.	56.45	Drilling	~/Content/Images/diamond-core-drill.jpg	8.2kg	110v
+30	Electric Cement Mixer	Drum capacity  136 litres,  Mix capacity  90 litres, IP45 rated motor.	45.00	Mixing	~/Content/Images/electric-cement-mixer.jpg	80kg	110v
+32	Diesel Cement Mixer	Drum capacity  340 litres,  Mix capacity 280 litres, 4.8HP engine.	63.40	Mixing	~/Content/Images/diesel-cement-mixer.jpg	145kg	Diesel
+33	Diesel Generator	Max. output: 5200W. Sockets: 1 x 230V 16A, 1 x 230V 32A, 1 x 110V 16A and 1 x 110V 32A	45.20	Power Supply	~/Content/Images/diesel-generator.jpg	95kg	Diesel
+34	Electric Chainsaw	1800W motor, semi-chisel chain, Chain gauge 0.043", Chain pitch 3/8", Cable length 10m.	32.50	Gardening	~/Content/Images/electric-chainsaw.jpg	12kg	240v
+36	Electric Compactor	Plate size: 400 x 320mm, motor speed: 2860rpm, compaction force: 5kN, cable length 10m. 	56.20	Building	~/Content/Images/electric-compactor.jpg	45kg	240v
+37	Jigsaw	720W motor, max. cut in wood 140mm (steel 10mm), bevel cuts 0-45 degs, overall length 231mm. 	29.90	Sawing	~/Content/Images/jigsaw.jpg	3.1kg	240v
+39	Nailer	Side-loading magazine, capacity 100 x 25mm nails / 100 x 22mm staples, 20 fasteners / min.	24.75	Joinery	~/Content/Images/mains-nailer.jpg	1.9kg	240v
+40	Micro Pipe Bender	For 6, 8 and 10mm pipes, bends up to 180 degrees.	19.50	Plumbing	~/Content/Images/micro-pipe-bender.jpg	0.5kg	Manual
+41	MIG Welder	Welding current range 40-105A, weld thickness 0-4mm, open circuit 32V, electrode 1.6-4mm	42.50	Welding	~/Content/Images/mig-welder.jpg	22kg	240v
+42	Mitre Saw	Blade dia. 250 x 30mm bore. Max. mitre 50 deg left/right. Max. bevel 48 deg left. Max. depth 80mm.	37.50	Sawing	~/Content/Images/mitre-saw.jpg	4.1kg	240v
+43	Orbital Sander	Sanding surface 150mm, orbit diameter 4mm, orbit speed 4500-12,000rpm	21.50	Sanding	~/Content/Images/orbital-sander.jpg	1.1kg	240v
+44	Petrol Chainsaw	3HP engine,  bar length 45cm, chain pitch 3/8", chain gauge 0.043". Overall length 80cm.	39.75	Gardening	~/Content/Images/petrol-chainsaw.jpg	14.5kg	Petrol
+46	Petrol Compactor	Plate size: 720 x 320mm, 4-Stroke Honda GX100 petrol engine.	65.45	Building	~/Content/Images/petrol-compactor.jpg	49kg	Petrol
+48	Petrol Generator	Honda GX160 petrol engine, max. output: 2200W, sockets: 1 x 230V 16A and 1 x 110V 16A	39.75	Power Supply	~/Content/Images/petrol-generator.jpg	45kg	Petrol
+50	Planer Thicknesses	Max. board (W x D): 260 x 310mm, max. cut depth: 3mm, feed rate 7.5m/min.	51.25	Joinery	~/Content/Images/planer-thicknesser.jpg	130kg	240v
+51	Road Breaker	Max. impact energy 69J, impact rate 1000bpm, 2 kW motor, accepts 1" hex chisel. 	45.75	Building	~/Content/Images/road-breaker.jpg	55kg	110v
+52	SDS Drill	Max. drilling capacity in masonry 32mm, wood 40mm, steel 13mm. Max. impact energy 5J.	29.50	Drilling	~/Content/Images/SDS-drill.jpg	5.6kg	240v
+53	Sheet Sander	Sanding surface W x L: 114 x 226mm, orbit diameter 2.4mm, orbit speed 5500-11,000rpm.	22.50	Sanding	~/Content/Images/sheet-sander.jpg	1.9kg	240v
+55	Pipe Bender	For 15, 22 and 28mm pipes, bends up to 180 degrees.	24.75	Plumbing	~/Content/Images/stand-pipe-bender.jpg	1.5kg	Manual
+57	Table Saw	Blade dia. 250mm x 30mm bore. max. bevel 45 deg left/right, main table 640 x 445mm.	54.60	Joinery	~/Content/Images/table-saw.jpg	61kg	240v
+58	Wall Breaker	Max. impact energy 45J, impact rate 7500bpm, 0.8kW motor, accepts 0.5" hex chisel. 	38.75	Building	~/Content/Images/wall-breaker.jpg	15kg	240v
+59	Wood Lathe	 Spindle speeds 500-2100rpm, drive centre height 152mm, 0.75HP motor.	55.80	Joinery	~/Content/Images/wood-lathe.jpg	75kg	240v
