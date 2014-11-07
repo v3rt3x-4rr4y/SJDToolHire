@@ -7,9 +7,8 @@ using SJDToolHire.Domain.Entities;
 
 namespace SJDToolHire.Domain.Abstract
 {
-    public interface IToolRepository
+    public interface IOrderProcessor
     {
-        IEnumerable<Tool> Tools { get; }
-        void SaveTool(Tool tool);
+        void ProcessOrder(Cart cart, ShippingDetails shippingDetails);
     }
 }

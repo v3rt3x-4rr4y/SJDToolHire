@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Configuration;
 using System.Web.Mvc;
 using Ninject;
 using Moq;
@@ -45,6 +46,12 @@ namespace SJDToolHire.WebUI.Infrastructure
 
             kernel.Bind<IToolRepository>().To<EFToolRepository>();
 
+            // This maps the IOrderProcessor interface to to the concrete implementation EmailOrderProcessor
+            EmailSettings emailSettings = new EmailSettings
+            {
+                WriteAsFile = bool.Parse(ConfigurationManager.AppSettings["Email.WriteAsFile"] ?? "false")
+            };
+            kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>().WithConstructorArgument("settings", emailSettings);
         }
    }
 }
