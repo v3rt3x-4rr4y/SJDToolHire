@@ -9,6 +9,8 @@ using Moq;
 using SJDToolHire.Domain.Abstract;
 using SJDToolHire.Domain.Entities;
 using SJDToolHire.Domain.Concrete;
+using SJDToolHire.WebUI.Infrastructure.Abstract;
+using SJDToolHire.WebUI.Infrastructure.Concrete;
 
 namespace SJDToolHire.WebUI.Infrastructure
 {
@@ -52,6 +54,8 @@ namespace SJDToolHire.WebUI.Infrastructure
                 WriteAsFile = bool.Parse(ConfigurationManager.AppSettings["Email.WriteAsFile"] ?? "false")
             };
             kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>().WithConstructorArgument("settings", emailSettings);
+
+            kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
         }
    }
 }

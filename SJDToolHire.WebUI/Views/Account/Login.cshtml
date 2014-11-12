@@ -1,0 +1,21 @@
+﻿@model SJDToolHire.WebUI.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Admin: Log In";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <label>User Name:</label>
+            @Html.TextBoxFor(m => m.UserName, new {@class = "form-control"})
+            <label>Password:</label>
+            @Html.PasswordFor(m => m.Password, new {@class = "form-control"})
+            <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign In"/>
+        }
+    </div>
+</div>

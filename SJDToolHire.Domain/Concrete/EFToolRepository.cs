@@ -39,5 +39,16 @@ namespace SJDToolHire.Domain.Concrete
             }
             context.SaveChanges();
         }
+
+        public Tool DeleteTool(int productID)
+        {
+            Tool dbEntry = context.Tools.Find(productID);
+            if (dbEntry != null)
+            {
+                context.Tools.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
+        }
     }
 }

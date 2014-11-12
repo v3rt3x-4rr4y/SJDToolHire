@@ -8,12 +8,29 @@ using SJDToolHire.Domain.Entities;
 
 namespace SJDToolHire.WebUI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IToolRepository repository;
         public AdminController(IToolRepository repo)
         {
             repository = repo;
+        }
+
+        public ViewResult Create()
+        {
+            return View("Edit", new Tool());
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int productId)
+        {
+            Tool deletedTool = repository.DeleteTool(productId);
+            if (deletedTool != null)
+            {
+                TempData["message"] = string.Format("{0} was successfully deleted", deletedTool.Name);
+            }
+            return RedirectToAction("Index");
         }
 
         public ActionResult Index()

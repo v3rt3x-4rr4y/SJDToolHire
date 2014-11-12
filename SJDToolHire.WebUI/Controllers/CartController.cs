@@ -78,6 +78,26 @@ namespace SJDToolHire.WebUI.Controllers
             return RedirectToAction("Index", new { returnUrl });
         }
 
+        public RedirectToRouteResult IncrementQty(Cart cart, int productId, string returnUrl)
+        {
+            Tool tool = repository.Tools.FirstOrDefault(p => p.ProductID == productId);
+            if (tool != null)
+            {
+                cart.AddItem(tool, 1);
+            }
+            return RedirectToAction("Index", new { returnUrl });
+        }
+
+        public RedirectToRouteResult DecrementQty(Cart cart, int productId, string returnUrl)
+        {
+            Tool tool = repository.Tools.FirstOrDefault(p => p.ProductID == productId);
+            if (tool != null)
+            {
+                cart.RemoveItem(tool);
+            }
+            return RedirectToAction("Index", new { returnUrl });
+        }
+
         private Cart GetCart()
         {
             Cart cart = (Cart)Session["Cart"];

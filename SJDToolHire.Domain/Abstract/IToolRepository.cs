@@ -11,5 +11,6 @@ namespace SJDToolHire.Domain.Abstract
     {
         IEnumerable<Tool> Tools { get; }
         void SaveTool(Tool tool);
+        Tool DeleteTool(int productId);
     }
 }
