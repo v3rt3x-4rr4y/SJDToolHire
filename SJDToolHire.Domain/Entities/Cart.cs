@@ -81,10 +81,17 @@ namespace SJDToolHire.Domain.Entities
 
     public class CartLine
     {
+        public CartLine()
+        {
+            Start = DateTime.Now;
+            End = DateTime.Now;
+        }
         public Tool Tool { get; set; }
         public int Quantity { get; set; }
+        [Required(ErrorMessage = "Please enter a valid start date")]
         public DateTime Start { get; set; }
-        public DateTime End { get; set; }
+        [Required(ErrorMessage = "Please enter a valid end date")]
+        public DateTime End{get; set; }
     }
 }
 

@@ -10,5 +10,7 @@ namespace SJDToolHire.WebUI.Models
     {
         public Cart Cart { get; set; }
         public string ReturnUrl { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
     }
 }

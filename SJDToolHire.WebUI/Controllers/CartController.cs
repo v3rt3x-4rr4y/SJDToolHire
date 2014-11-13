@@ -97,6 +97,18 @@ namespace SJDToolHire.WebUI.Controllers
             }
             return RedirectToAction("Index", new { returnUrl });
         }
+        
+        [HttpPost]
+        public RedirectToRouteResult SetStartDate(string startdate, Cart cart, string returnUrl)
+        {
+            return RedirectToAction("Index", new { returnUrl });
+        }
+
+        [HttpPost]
+        public RedirectToRouteResult SetEndDate(string enddate, Cart cart, string returnUrl)
+        {
+            return RedirectToAction("Index", new { returnUrl });
+        }
 
         private Cart GetCart()
         {

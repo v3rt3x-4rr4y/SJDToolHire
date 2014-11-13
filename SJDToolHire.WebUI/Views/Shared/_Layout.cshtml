@@ -8,6 +8,9 @@
     <link href="~/Content/ErrorStyles.css" rel="stylesheet" />
     <link href="~/Content/dashboard.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker3.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap-datepicker.js"></script>
     <title>@ViewBag.Title</title>
     <style>
         .navbar-right
@@ -19,29 +22,6 @@
     </style>
 </head>
 <body>
-
-<!--
-    <div class="navbar navbar-inverse" role="navigation">
-        <a class="navbar-brand" href="#">
-            <span class="hidden-xs">SJD Tool Hire</span>
-            <div class="visible-xs">SJD</div>
-            <div class="visible-xs">Tool Hire</div>
-        </a>
-    </div>
-    <div class="visible-xs">
-        @*Html.Action("Menu", "Nav", new { horizontalLayout = true })*@
-    </div>
-    <div class="row panel">
-        <div class="col-sm-3 hidden-xs">
-            @*Html.Action("Menu", "Nav")*@
-        </div>
-        <div class="col-xs-12 col-sm-8">
-            @*RenderBody()*@
-        </div>
-    </div>
-
--->
-
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -77,5 +57,40 @@
             @RenderBody()
         </div>
     </div>
+    <script type="text/javascript">
+        $(function ()
+        { // will trigger when the document is ready
+            $(".datepicker").datepicker(
+            {
+                format: "dd/mm/yyyy",
+                autoclose: true,
+                todayHighlight: true
+            });
+            $(".startdate").datepicker(
+            {
+            }).on('changeDate', function (selected)
+            {
+                var startDate = new Date(selected.date.valueOf());
+                $('.enddate').datepicker('setStartDate', startDate);
+                $('#form-start-date').submit();
+            }).on('clearDate', function (selected)
+            {
+                $('.enddate').datepicker('setStartDate', null);
+                $('#form-start-date').submit();
+            });
+            $(".enddate").datepicker(
+            {
+            }).on('changeDate', function (selected)
+            {
+                var endDate = new Date(selected.date.valueOf());
+                $('.startdate').datepicker('setEndDate', endDate);
+                $('#form-end-date').submit();
+            }).on('clearDate', function (selected)
+            {
+                $('.startdate').datepicker('setEndDate', null);
+                $('#form-end-date').submit();
+            });
+        });
+    </script>
 </body>
 </html>
