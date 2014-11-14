@@ -73,6 +73,40 @@ namespace SJDToolHire.Domain.Entities
             lineCollection.Clear();
         }
 
+        public bool SetStartDate(Tool tool, DateTime startDate)
+        {
+            bool retVal = false;
+            CartLine line = lineCollection
+                            .Where(p => p.Tool.ProductID == tool.ProductID)
+                            .FirstOrDefault();
+            if (line != null)
+            {
+                if (line.End.Ticks >= startDate.Ticks)
+                {
+                    line.Start = startDate;
+                    retVal = true;
+                }
+            }
+            return retVal;
+        }
+
+        public bool SetEndDate(Tool tool, DateTime endDate)
+        {
+            bool retVal = false;
+            CartLine line = lineCollection
+                            .Where(p => p.Tool.ProductID == tool.ProductID)
+                            .FirstOrDefault();
+            if (line != null)
+            {
+                if (line.Start.Ticks <= endDate.Ticks)
+                {
+                    line.End = endDate;
+                    retVal = true;
+                }
+            }
+            return retVal;
+        }
+
         public IEnumerable<CartLine> Lines
         {
             get { return lineCollection; }

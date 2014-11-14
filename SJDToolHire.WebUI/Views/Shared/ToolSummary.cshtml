@@ -1,25 +1,40 @@
 ﻿@model SJDToolHire.Domain.Entities.Tool
 
 <div class="well">
-    <h3>
-        <strong>@Model.Name</strong>
-        <span class="pull-right label label-primary">
-            @Model.Rate.ToString("c") per day
-        </span>
-    </h3>
-
-    @using (Html.BeginForm("AddToCart", "Cart"))
-    {
-        <div class="pull-right">
-            @Html.HiddenFor(x => x.ProductID)
-            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-            <input type="submit" class="btn btn-success" value="Add to basket" />
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span>
+                <span class="lead" style="padding-left: 0px">
+                    <strong>@Model.Name</strong>
+                </span>
+                    <span class="pull-right label label-warning" style="font-size:large">
+                        @Model.Rate.ToString("c") per day
+                    </span>
+            </span>
         </div>
-    }
+        <div class="panel-body">
+            <div style="padding-left: 20px">
+                <p><strong>Description: </strong>@Model.Description</p>
+                <p><strong>Power Supply: </strong>@Model.Power</p>
+                <p><strong>Weight:</strong> @Model.Weight</p>
+            </div>
+            <div style="padding-left: 20px">
+                <img src='@Url.Content(@Model.ImageUrl)' class="img-thumbnail" style="width:150px; height: auto" />
+            </div>
+            </div>
+        <div class="panel-footer" style="height:55px">
+            <span style="padding-left: 0px; font-size:larger; font-style:italic">
+                <strong>Category: </strong>@Model.Category
+            </span>
+            <span class="pull-right">
+                @using (Html.BeginForm("AddToCart", "Cart"))
+                {
 
-    <span class="lead">@Model.Description</span>
-    <p>@Model.Power</p>
-    <p>@Model.Weight</p>
-    <p>@Model.Category</p>
-    <img src='@Url.Content(@Model.ImageUrl)' />  
+                    @Html.HiddenFor(x => x.ProductID)
+                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                    <input type="submit" class="btn btn-success" value="Add to basket" />
+                }
+            </span>
+        </div>
+    </div>
 </div>

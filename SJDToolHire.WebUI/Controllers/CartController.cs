@@ -99,14 +99,35 @@ namespace SJDToolHire.WebUI.Controllers
         }
         
         [HttpPost]
-        public RedirectToRouteResult SetStartDate(string startdate, Cart cart, string returnUrl)
+        public RedirectToRouteResult SetStartDate(string startdate, Cart cart, int productId, string returnUrl)
         {
+            Tool tool = repository.Tools.FirstOrDefault(p => p.ProductID == productId);
+            if (tool != null)
+            {
+                IFormatProvider culture = new System.Globalization.CultureInfo("en-GB", true);
+                DateTime dt = DateTime.Parse(startdate, culture, System.Globalization.DateTimeStyles.AssumeLocal);
+                if (!cart.SetStartDate(tool, dt))
+                {
+                    TempData["AlertMessage"] = "Start date cannot be later than end date";
+                }
+            }
             return RedirectToAction("Index", new { returnUrl });
         }
 
         [HttpPost]
-        public RedirectToRouteResult SetEndDate(string enddate, Cart cart, string returnUrl)
+        public RedirectToRouteResult SetEndDate(string enddate, Cart cart, int productId, string returnUrl)
         {
+            Tool tool = repository.Tools.FirstOrDefault(p => p.ProductID == productId);
+            if (tool != null)
+            {
+                IFormatProvider culture = new System.Globalization.CultureInfo("en-GB", true);
+                DateTime dt = DateTime.Parse(enddate, culture, System.Globalization.DateTimeStyles.AssumeLocal);
+                if (!cart.SetEndDate(tool, dt))
+                {
+                    TempData["AlertMessage"] = "End date cannot be earlier than start date";
+                }
+
+            }
             return RedirectToAction("Index", new { returnUrl });
         }
 
