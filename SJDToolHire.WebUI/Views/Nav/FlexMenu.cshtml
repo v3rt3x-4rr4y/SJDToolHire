@@ -5,10 +5,10 @@
 }
 
 <div class="@wrapperClasses">
-    @Html.ActionLink("All Categories", "List", "Tool", null, new { @class = horizontal ? "btn btn-default btn-sm" : "btn btn-block btn-default btn-lg col-md-offset-2", style = "font-size:90%" })
+    @Html.ActionLink("All Categories", "List", "Tool", null, new { @class = horizontal ? "btn btn-default btn-sm" : "btn btn-block btn-default btn-lg col-md-offset-2", style = "font-size:90%; color: #000000; background: #DEDE28; border-color: #000000;" })
     @foreach (var link in Model)
     {
         @Html.RouteLink(link, new {controller = "Tool", action = "List", category = link, page = 1},
-                              new { @class = (horizontal ? "btn btn-default btn-sm" : "btn btn-block btn-default btn-lg col-md-offset-2") + (link == ViewBag.SelectedCategory ? " btn-primary" : ""), style="font-size:90%" })
+                                   new { @class = (horizontal ? "btn btn-default btn-sm" : "btn btn-block btn-default btn-lg col-md-offset-2") + (link == ViewBag.SelectedCategory ? " btn-primary" : ""), style = "font-size:90%; color: #000000; border-color: #000000; background: #DEDE28;" })
     }
 </div>

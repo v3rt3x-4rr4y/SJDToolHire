@@ -127,6 +127,7 @@
     <Content Include="Content\Images\electric-cement-mixer.jpg" />
     <Content Include="Content\Images\electric-chainsaw.jpg" />
     <Content Include="Content\Images\electric-compactor.jpg" />
+    <Content Include="Content\Images\hazard-stripes.jpg" />
     <Content Include="Content\Images\jigsaw.jpg" />
     <Content Include="Content\Images\mains-nailer.jpg" />
     <Content Include="Content\Images\micro-pipe-bender.jpg" />

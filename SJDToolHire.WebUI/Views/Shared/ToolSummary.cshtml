@@ -1,19 +1,19 @@
 ﻿@model SJDToolHire.Domain.Entities.Tool
 
-<div class="well">
-    <div class="panel panel-default">
-        <div class="panel-heading">
+<div class="well" style="background: #1C1C1B; border: none"> 
+    <div class="panel panel-default" style="border: none; background-color: #BABABA">
+        <div class="panel-heading" style="background: #474744; border: none">
             <span>
-                <span class="lead" style="padding-left: 0px">
+                <span class="lead" style="padding-left: 0px; color: white; background-color: #474744;">
                     <strong>@Model.Name</strong>
                 </span>
-                    <span class="pull-right label label-warning" style="font-size:large">
-                        @Model.Rate.ToString("c") per day
-                    </span>
+                <span class="pull-right label label-warning" style="font-size:large">
+                    @Model.Rate.ToString("c") per day
+                </span>
             </span>
         </div>
         <div class="panel-body">
-            <div style="padding-left: 20px">
+            <div style="padding-left: 20px; color:black">
                 <p><strong>Description: </strong>@Model.Description</p>
                 <p><strong>Power Supply: </strong>@Model.Power</p>
                 <p><strong>Weight:</strong> @Model.Weight</p>
@@ -21,8 +21,8 @@
             <div style="padding-left: 20px">
                 <img src='@Url.Content(@Model.ImageUrl)' class="img-thumbnail" style="width:150px; height: auto" />
             </div>
-            </div>
-        <div class="panel-footer" style="height:55px">
+        </div>
+        <div class="panel-footer" style="height:55px; color: #DEDE66; border: none; background: #474744; ">
             <span style="padding-left: 0px; font-size:larger; font-style:italic">
                 <strong>Category: </strong>@Model.Category
             </span>
