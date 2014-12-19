@@ -12,6 +12,6 @@
     @Html.Partial("ToolSummary", p)
 }
 
-<div class="pager">
-    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new {page =  x, category = Model.CurrentCategory}))
+<div class="pager col-md-12">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory }))
 </div>

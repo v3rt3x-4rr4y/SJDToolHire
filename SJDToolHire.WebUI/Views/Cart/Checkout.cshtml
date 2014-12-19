@@ -6,17 +6,16 @@
 
 @using (Html.BeginForm())
 {
-    <div class="well">
+    <div class="well col-md-offset-1">
         <h2>Check out now</h2>
-        <p>Please enter your details, and we'll ship your goods right away!</p>
+        <p>Please enter your details, and we'll reserve your tools for you.</p>
         @Html.ValidationSummary()
-        <h3>Ship to</h3>
         <div class="form-group">
-            <label>Name:</label>
+            <h3>Customer Name:</h3>
             @Html.TextBoxFor(x => x.Name, new {@class = "form-control" })
         </div>
 
-        <h3>Address</h3>
+        <h3>Customer Address:</h3>
 
         @foreach (var property in ViewData.ModelMetadata.Properties)
         {
@@ -32,15 +31,6 @@
             }
         }
 
-        <h3>Options</h3>
-    
-        <div class="checkbox">
-            <label>
-                @Html.EditorFor(x => x.GiftWrap)
-                Gift wrap these items
-            </label>
-        </div>
-    
         <div class="text-center">
             <input class="btn btn-primary" type="submit" value="Complete order" />
         </div>

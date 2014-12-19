@@ -18,13 +18,13 @@
 
     <table id="cartTable" class="table">
         <thead>
-            <tr>
-                <th style ="width:50px">Quantity</th>
-                <th style="width:250px">Item</th>
-                <th style="width:200px">Hire Period Start</th>
-                <th style="width:200px">Hire Period End</th>
-                <th style="width:150px" class="text-right">Unit Cost</th>
-                <th style="width:100px" class="text-right">Subtotal</th>
+            <tr style="align-">
+                <th style="width:50px">Quantity</th>
+                <th style="width:200px">Item</th>
+                <th style="width:130px">Hire Period Start</th>
+                <th style="width:130px">Hire Period End</th>
+                <th style="width:100px" class="text-right">Unit Cost</th>
+                <th style="width:75px" class="text-right">Subtotal</th>
             </tr>
         </thead>
 
@@ -35,7 +35,7 @@
                     <td class="text-center">@line.Quantity</td>
                     <td class="text-left">@line.Tool.Name</td>
                     <td class="text-center">
-                        @using (Html.BeginForm("SetStartDate", "Cart",  FormMethod.Post, new { id="form-start-date"}))
+                        @using (Html.BeginForm("SetStartDate", "Cart", FormMethod.Post, new { id = "form-start-date" }))
                         {
                             @Html.Hidden("ProductId", line.Tool.ProductID)
                             @Html.HiddenFor(x => x.ReturnUrl)
@@ -78,7 +78,7 @@
                             @Html.Hidden("ProductId", line.Tool.ProductID)
                             @Html.HiddenFor(x => x.ReturnUrl)
                             <label for="sjd-trash" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></label>
-                            <input id="sjd-trash" class="hidden" value="Remove line" type="submit"/>
+                            <input id="sjd-trash" class="hidden" value="Remove line" type="submit" />
                         }
                     </td>
                 </tr>

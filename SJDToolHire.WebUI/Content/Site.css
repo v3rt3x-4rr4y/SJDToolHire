@@ -26,3 +26,14 @@ textarea {
     max-width: 280px;
 }
 
+.btn-sjd {
+  background-color: #DEDE28;
+  border-color: #000000;
+  color: #000000;
+}
+
+.btn-sjd.selected {
+  background-color: #000000;
+  color: #DEDE28;
+  border-color: #DEDE28;
+}
